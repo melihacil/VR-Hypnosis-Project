@@ -5,7 +5,8 @@ using UnityEngine;
 public class NumberAnimation : MonoBehaviour
 {
 
-
+    // Animation pass needs to be added
+    // Gazeupon function will start the 
     public static NumberAnimation Instance { get; private set; }
 
     private void Awake()
