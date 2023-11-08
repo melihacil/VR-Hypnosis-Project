@@ -35,11 +35,14 @@ public class Gaze_Manager : MonoBehaviour
 
         Ray newRay = new Ray(m_playerCamera.transform.position, m_playerCamera.transform.rotation * Vector3.forward);
 
+
+
         RaycastHit newHit;
 
-
+        Debug.DrawRay(m_playerCamera.transform.position, m_playerCamera.transform.rotation * Vector3.forward, Color.red);
         if (Physics.Raycast(newRay, out newHit, Mathf.Infinity))
         {
+            
             m_lastGazedUpon = newHit.transform.gameObject;
 
             //m_lastGazedUpon.SendMessage("NotRequired", SendMessageOptions.DontRequireReceiver);
