@@ -9,6 +9,10 @@ public class NumberAnimation : MonoBehaviour
     // Gazeupon function will start the 
     public static NumberAnimation Instance { get; private set; }
 
+
+    [SerializeField] private Transform m_PlayerTransform;
+    public Transform PlayerTransform { get { return m_PlayerTransform; } }
+
     private void Awake()
     {
         if (Instance == null)
@@ -45,13 +49,16 @@ public class NumberAnimation : MonoBehaviour
         {
             m_NumberObj[m_Turn].SetActive(false);
             m_Turn = 0;
+            m_NumberObj[m_Turn].SetActive(true);
             return;
         }
         m_Turn++;
         //m_NumberObj.RemoveAt(0);
+        //m_Turn %= m_NumberObj.Count;
         m_NumberObj[m_Turn].SetActive(true);
         m_NumberObj[m_Turn - 1].SetActive(false);
 
+        
     }
 
 

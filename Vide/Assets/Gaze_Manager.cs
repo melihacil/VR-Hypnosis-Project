@@ -18,7 +18,7 @@ public class Gaze_Manager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         CheckGaze();
     }
@@ -42,10 +42,10 @@ public class Gaze_Manager : MonoBehaviour
         Debug.DrawRay(m_playerCamera.transform.position, m_playerCamera.transform.rotation * Vector3.forward, Color.red);
         if (Physics.Raycast(newRay, out newHit, Mathf.Infinity))
         {
-            
+            Debug.Log("");
             m_lastGazedUpon = newHit.transform.gameObject;
 
-            //m_lastGazedUpon.SendMessage("NotRequired", SendMessageOptions.DontRequireReceiver);
+            m_lastGazedUpon.SendMessage("OnGaze", SendMessageOptions.DontRequireReceiver);
         }
 
 
