@@ -21,11 +21,17 @@ public class CircleFade : MonoBehaviour
         }
     }
 
+    
 
     [ContextMenu("Test Scale Fading")]
     public void StartCircleFade()
     {
         StartCoroutine(FadeRoutine(m_duration));
+    }
+
+    private void OnEnable()
+    {
+        StartCircleFade();
     }
 
     IEnumerator FadeRoutine(float duration)
