@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Cam_ControlMouse : MonoBehaviour
 {
@@ -15,6 +16,11 @@ public class Cam_ControlMouse : MonoBehaviour
     public float lookXLimit = 45.0f;
     float rotationX = 0;
 
+    private bool m_AndroidBuild;
+    private bool m_WindowsBuild;
+
+
+
     private void Awake()
     {
         m_camera = GetComponent<Camera>();
@@ -24,8 +30,29 @@ public class Cam_ControlMouse : MonoBehaviour
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+
+#if UNITY_STANDALONE_WIN 
+        m_AndroidBuild = false;
+        m_WindowsBuild = true;
+        Cursor.visible = true;
+#elif UNITY_ANDROID
+        m_AndroidBuild = false;
+        m_WindowsBuild = true;
         Cursor.visible = false;
+
+#else
+        Debug.Log("Unsupported Platform");
+#endif
+
+        if (m_WindowsBuild)
+        {
+            WindowsSettings();
+        }
+        else
+        {
+            AndroidSettings();
+        }
+        
     }
 
     Vector2 rotation;
@@ -56,5 +83,42 @@ public class Cam_ControlMouse : MonoBehaviour
 
 
 
+    }
+
+    void TestEmpty()
+    {
+        LoadScene("");
+        StartCoroutine(nameof(LoadSceneAsync));
+    }
+
+    void AndroidSettings()
+    {
+        
+    }
+
+    void WindowsSettings()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+
+    void LoadScene(string sceneName)
+    {
+        // Directly load the scene
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+    }
+
+    IEnumerator LoadSceneAsync(string sceneName)
+    {
+        // The Application loads the Scene in the background as the current Scene runs.
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            Debug.Log("Loading Screen Code will be here");
+            yield return null;
+        }
     }
 }
