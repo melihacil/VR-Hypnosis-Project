@@ -53,7 +53,7 @@ public class MenuController : MonoBehaviour
         if (isInitialClose)
             gameObject.SetActive(false);
 
-        versionText.text = $"Bitirme Projesi V {Application.version}";
+        versionText.text = $"Bitirme Projesi v{Application.version} \nUnity v{Application.unityVersion}";
     }
 
 

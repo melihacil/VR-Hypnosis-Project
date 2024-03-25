@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public static class Vector3Extentions
+public static class Vector3Extensions
 {
     public static Vector3 SetY(this Vector3 vector, float value, bool isAdditive = false)
     {

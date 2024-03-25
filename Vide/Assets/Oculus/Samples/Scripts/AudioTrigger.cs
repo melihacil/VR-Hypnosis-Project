@@ -51,17 +51,17 @@ namespace Oculus.Interaction
         [Tooltip("Check the 'Use Random Range' bool to and adjust the min and max slider values for randomized volume level playback.")]
         [SerializeField]
         private MinMaxPair _volumeRandomization;
-        public MinMaxPair VolumeRandomization
-        {
-            get
-            {
-                return _volumeRandomization;
-            }
-            set
-            {
-                _volumeRandomization = value;
-            }
-        }
+        //public MinMaxPair VolumeRandomization
+        //{
+        //    get
+        //    {
+        //        return _volumeRandomization;
+        //    }
+        //    set
+        //    {
+        //        _volumeRandomization = value;
+        //    }
+        //}
 
         [Tooltip("Pitch set here will override the volume set on the attached sound source component.")]
         [SerializeField]
@@ -83,17 +83,17 @@ namespace Oculus.Interaction
         [Tooltip("Check the 'Use Random Range' bool to and adjust the min and max slider values for randomized volume level playback.")]
         [SerializeField]
         private MinMaxPair _pitchRandomization;
-        public MinMaxPair PitchRandomization
-        {
-            get
-            {
-                return _pitchRandomization;
-            }
-            set
-            {
-                _pitchRandomization = value;
-            }
-        }
+        //public MinMaxPair PitchRandomization
+        //{
+        //    get
+        //    {
+        //        return _pitchRandomization;
+        //    }
+        //    set
+        //    {
+        //        _pitchRandomization = value;
+        //    }
+        //}
 
         [Tooltip("True by default. Set to false for sounds to bypass the spatializer plugin. Will override settings on attached audio source.")]
         [SerializeField]
