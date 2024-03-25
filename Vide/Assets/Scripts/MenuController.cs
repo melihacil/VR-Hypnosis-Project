@@ -14,7 +14,7 @@ public class MenuController : MonoBehaviour
     private Transform scenarioPanel;
 
     [SerializeField]
-    private Transform themePanel;
+    private GameObject themePanel;
 
     [SerializeField]
     private PokeInteractable scenarioListButton;
@@ -87,7 +87,7 @@ public class MenuController : MonoBehaviour
     public void SwitchThemePanels()
     {
         mainPanel.gameObject.SetActive(!mainPanel.gameObject.activeSelf);
-        themePanel.gameObject.SetActive(!scenarioPanel.gameObject.activeSelf);
+        themePanel.SetActive(!themePanel.gameObject.activeSelf);
     }
 
     //---------------------------------------------------------------------------------
