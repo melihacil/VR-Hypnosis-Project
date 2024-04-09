@@ -177,48 +177,62 @@ public class Outline : MonoBehaviour {
     }
   }
 
-  void LoadSmoothNormals() {
+    void LoadSmoothNormals()
+    {
 
-    // Retrieve or generate smooth normals
-    foreach (var meshFilter in GetComponentsInChildren<MeshFilter>()) {
+        // Retrieve or generate smooth normals
+        foreach (var meshFilter in GetComponentsInChildren<MeshFilter>())
+        {
 
-      // Skip if smooth normals have already been adopted
-      if (!registeredMeshes.Add(meshFilter.sharedMesh)) {
-        continue;
-      }
+            // Skip if smooth normals have already been adopted
+            if (!registeredMeshes.Add(meshFilter.sharedMesh))
+            {
+                continue;
+            }
 
-      // Retrieve or generate smooth normals
-      var index = bakeKeys.IndexOf(meshFilter.sharedMesh);
-      var smoothNormals = (index >= 0) ? bakeValues[index].data : SmoothNormals(meshFilter.sharedMesh);
+            // Retrieve or generate smooth normals
+            var index = bakeKeys.IndexOf(meshFilter.sharedMesh);
+            var smoothNormals = (index >= 0) ? bakeValues[index].data : SmoothNormals(meshFilter.sharedMesh);
 
-      // Store smooth normals in UV3
-      meshFilter.sharedMesh.SetUVs(3, smoothNormals);
+            // Store smooth normals in UV3
+            //try
+            //{
+            //    meshFilter.sharedMesh.SetUVs(3, smoothNormals);
 
-      // Combine submeshes
-      var renderer = meshFilter.GetComponent<Renderer>();
+            //}
+            //catch (Exception ex)
+            //{
+            //    Debug.LogError("Not Important " + ex);
+            //}
 
-      if (renderer != null) {
-        CombineSubmeshes(meshFilter.sharedMesh, renderer.sharedMaterials);
-      }
+            // Combine submeshes
+            var renderer = meshFilter.GetComponent<Renderer>();
+
+            if (renderer != null)
+            {
+                CombineSubmeshes(meshFilter.sharedMesh, renderer.sharedMaterials);
+            }
+        }
+
+        // Clear UV3 on skinned mesh renderers
+        foreach (var skinnedMeshRenderer in GetComponentsInChildren<SkinnedMeshRenderer>())
+        {
+
+            // Skip if UV3 has already been reset
+            if (!registeredMeshes.Add(skinnedMeshRenderer.sharedMesh))
+            {
+                continue;
+            }
+
+            // Clear UV3
+            skinnedMeshRenderer.sharedMesh.uv4 = new Vector2[skinnedMeshRenderer.sharedMesh.vertexCount];
+
+            // Combine submeshes
+            CombineSubmeshes(skinnedMeshRenderer.sharedMesh, skinnedMeshRenderer.sharedMaterials);
+        }
     }
 
-    // Clear UV3 on skinned mesh renderers
-    foreach (var skinnedMeshRenderer in GetComponentsInChildren<SkinnedMeshRenderer>()) {
-
-      // Skip if UV3 has already been reset
-      if (!registeredMeshes.Add(skinnedMeshRenderer.sharedMesh)) {
-        continue;
-      }
-
-      // Clear UV3
-      skinnedMeshRenderer.sharedMesh.uv4 = new Vector2[skinnedMeshRenderer.sharedMesh.vertexCount];
-
-      // Combine submeshes
-      CombineSubmeshes(skinnedMeshRenderer.sharedMesh, skinnedMeshRenderer.sharedMaterials);
-    }
-  }
-
-  List<Vector3> SmoothNormals(Mesh mesh) {
+    List<Vector3> SmoothNormals(Mesh mesh) {
 
     // Group vertices by location
     var groups = mesh.vertices.Select((vertex, index) => new KeyValuePair<Vector3, int>(vertex, index)).GroupBy(pair => pair.Key);

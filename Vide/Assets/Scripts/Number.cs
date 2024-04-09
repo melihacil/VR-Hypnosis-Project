@@ -17,10 +17,10 @@ public class Number : MonoBehaviour, IGazeUpon
 
     private void Start()
     {
-        if (NumberAnimation.Instance.PlayerTransform != null)
-            transform.LookAt(NumberAnimation.Instance.PlayerTransform.position);
-        else
-            Debug.Log("Player Transform is null");
+        //if (NumberAnimation.Instance.PlayerTransform != null)
+        //    transform.LookAt(NumberAnimation.Instance.PlayerTransform.position);
+        //else
+        //    Debug.Log("Player Transform is null");
     }
     public void NotGazingUpon()
     {
@@ -34,6 +34,10 @@ public class Number : MonoBehaviour, IGazeUpon
 
         m_checked = true;
         m_animator.SetTrigger("StartAnim");
+    }
+    private void OnEnable()
+    {
+        OnGaze();
     }
 
     public void ChangeNumber()
