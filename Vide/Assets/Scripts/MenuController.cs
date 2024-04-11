@@ -36,7 +36,7 @@ public class MenuController : MonoBehaviour
     private bool _isMenuActive;
     //private OVRInteractorController _interactorController;
 
-
+    public ScorePanel panelInfo;
 
     //---------------------------------------------------------------------------------
     private void Start()
@@ -88,6 +88,11 @@ public class MenuController : MonoBehaviour
     {
         mainPanel.gameObject.SetActive(!mainPanel.gameObject.activeSelf);
         themePanel.SetActive(!themePanel.gameObject.activeSelf);
+    }
+    public void SwitchThemePanels(GameObject obj)
+    {
+        mainPanel.gameObject.SetActive(!mainPanel.gameObject.activeSelf);
+        obj.SetActive(!obj.activeSelf);
     }
 
     //---------------------------------------------------------------------------------
