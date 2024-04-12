@@ -31,7 +31,7 @@ public class HandHoldSequence : MonoBehaviour
 
     private void EndObjectSequence()
     {
-        SequenceData.instance.AddSequenceObject(_duration, _gazedDuration);
+        SequenceData.instance.AddSequenceObject(_duration, _gazedDuration, isGazed);
         Debug.Log(gameObject.name + " Player gazed = " + _gazedDuration + " Total expected time = " + m_expectedDuration);
         Destroy(this.gameObject);
     }

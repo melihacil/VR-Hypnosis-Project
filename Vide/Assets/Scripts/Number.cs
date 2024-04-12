@@ -4,44 +4,38 @@ using UnityEngine;
 
 public class Number : MonoBehaviour, IGazeUpon
 {
-
-
     [SerializeField] private Animator m_animator;
-
-    
 
     private void Awake()
     {
         m_animator = GetComponent<Animator>();
     }
 
-    private void Start()
-    {
-        //if (NumberAnimation.Instance.PlayerTransform != null)
-        //    transform.LookAt(NumberAnimation.Instance.PlayerTransform.position);
-        //else
-        //    Debug.Log("Player Transform is null");
-    }
-    public void NotGazingUpon()
-    {
 
+    private void StartNumberAnimation ()
+    {
+        m_animator.SetTrigger("StartAnim");
     }
     private bool m_checked = false;
     public void OnGaze()
     {
         if (m_checked)
             return;
-
         m_checked = true;
-        m_animator.SetTrigger("StartAnim");
+        
     }
     private void OnEnable()
     {
-        OnGaze();
+        Invoke(nameof(StartNumberAnimation), 0.2f);
     }
 
     public void ChangeNumber()
     {
         NumberAnimation.Instance.NumberAnimations();
+    }
+
+    public void NotGazingUpon()
+    {
+     //   throw new System.NotImplementedException();
     }
 }

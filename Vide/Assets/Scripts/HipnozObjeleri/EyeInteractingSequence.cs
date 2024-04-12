@@ -51,7 +51,7 @@ public class EyeInteractingSequence : MonoBehaviour
     private void EndObjectSequence()
     {
         isDone = true;
-        SequenceData.instance.AddSequenceObject(_duration, _gazedDuration);
+        SequenceData.instance.AddSequenceObject(_duration, _gazedDuration, isGazed);
         Debug.Log(gameObject.name + " Player gazed = " + _gazedDuration + " Total expected time = " + m_expectedDuration);
         if (shouldDestroy)
             Destroy(this.gameObject);

@@ -36,8 +36,9 @@ public class SequenceData : MonoBehaviour
         }
     }
 
-    public void AddSequenceObject(float duration, float gazedDuration)
+    public void AddSequenceObject(float duration, float gazedDuration, bool isGazed)
     {
+        totalGazedObjects += isGazed ? (byte)1 : (byte)0;
         totalObjects++;
         totalExpectedGazeTime += duration;
         totalGazeTime += gazedDuration;
