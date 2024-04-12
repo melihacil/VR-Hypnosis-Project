@@ -43,6 +43,10 @@ public class SceneLoadManager : MonoBehaviour
     [ContextMenu("Load Main Menu")]
     public void LoadMainScene()
     {
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            SequenceData.instance.SequenceEnd();
+        }
         loader.LoadInstantly(0);
     }
 }

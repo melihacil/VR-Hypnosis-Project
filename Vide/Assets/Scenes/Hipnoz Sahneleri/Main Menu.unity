@@ -3227,6 +3227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0132d5e224a0d35478af7607f1f432cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastActiveIndex: -1
   _mainMenuScorePanel: {fileID: 2047324956}
 --- !u!4 &973044861
 Transform:
@@ -3281,7 +3282,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.05, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1080749899
@@ -3493,7 +3494,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.05, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1257860564
@@ -4317,7 +4318,10 @@ PrefabInstance:
     - {fileID: 414079973660828628, guid: 53080e5252a6a1a4ea5c4bb29f6992a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8791521769556784503, guid: 53080e5252a6a1a4ea5c4bb29f6992a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 53080e5252a6a1a4ea5c4bb29f6992a3, type: 3}
 --- !u!4 &1611445390 stripped
 Transform:
@@ -5060,6 +5064,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 6070557662036507720, guid: d920f896d6903404fa9b1621d8018160, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 5043873438866242016, guid: d920f896d6903404fa9b1621d8018160, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 4392614748386259818, guid: d920f896d6903404fa9b1621d8018160, type: 3}

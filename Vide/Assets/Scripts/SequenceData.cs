@@ -36,9 +36,6 @@ public class SequenceData : MonoBehaviour
         }
     }
 
-
-
-
     public void AddSequenceObject(float duration, float gazedDuration)
     {
         totalObjects++;
@@ -50,7 +47,6 @@ public class SequenceData : MonoBehaviour
     public void SequenceEnd()
     {
         SetSeqData();
-        Debug.Log("Sequence Ended");
         HypnoseSequenceManager.instance.SetSequenceData(index,dataVal);
     }
     private void SetSeqData()
@@ -60,6 +56,7 @@ public class SequenceData : MonoBehaviour
         dataVal.totalObjects = this.totalObjects;
         dataVal.totalGazedObjects = this.totalGazedObjects;
         dataVal.totalExpectedGazeTime = this.totalExpectedGazeTime;
+        dataVal.levelIndex = this.index;
     }
 
 }

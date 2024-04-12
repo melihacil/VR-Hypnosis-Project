@@ -13,7 +13,7 @@ public struct SequenceDataValues
     public float totalExpectedGazeTime;
     public byte totalObjects;
     public byte totalGazedObjects;
-
+    public byte levelIndex;
     public readonly float GetGazeRatio()
     {
         return (totalGazeTime / totalExpectedGazeTime);
@@ -29,7 +29,7 @@ public struct SequenceDataValues
 public class HypnoseSequenceManager : MonoBehaviour
 {
     public static HypnoseSequenceManager instance;
-
+    public short lastActiveIndex = -1;
 
     [SerializeField] private ScorePanel _mainMenuScorePanel;
 
@@ -51,6 +51,9 @@ public class HypnoseSequenceManager : MonoBehaviour
     public void SetSequenceData(short index, SequenceDataValues value)
     {
         _datas[index] = value;
+        lastActiveIndex = index;
+        Debug.Log("Sequence Ended");
+
     }
 
     public SequenceDataValues GetSequenceData(byte index)
@@ -72,15 +75,32 @@ public class HypnoseSequenceManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Your code to execute after scene loading goes here
+        if (_datas.Length <= 0)
+        {
+            return;
+        }
 
         if (scene.buildIndex.Equals(0))
         {
-
             //_mainMenuScorePanel = GameObject.FindGameObjectWithTag("ScorePanel").GetComponent<ScorePanel>();
             _mainMenuScorePanel = GameObject.Find("Menu Panel").GetComponent<MenuController>().panelInfo;
-
-            Debug.Log("Scene loaded: " + scene.name + " Loaded gameobject" + _mainMenuScorePanel.gameObject);
+            _mainMenuScorePanel.UpdateScoreTexts(ReturnTexts());
+            Debug.Log(ReturnTexts());
+            //Debug.Log("Scene loaded: " + scene.name + " Loaded gameobject" + _mainMenuScorePanel.gameObject);
 
         }
+    }
+
+    private string[] ReturnTexts()
+    {
+        var data = _datas[lastActiveIndex];
+
+        return new string[] { data.totalTime.ToString(), 
+            data.totalGazeTime.ToString(), 
+            data.totalExpectedGazeTime.ToString(), 
+            data.totalObjects.ToString(), 
+            data.totalGazedObjects.ToString(),
+            data.levelIndex.ToString()
+        };
     }
 }
