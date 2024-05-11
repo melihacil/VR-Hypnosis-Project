@@ -40,25 +40,25 @@ public class RingColorController : MonoBehaviour
             Debug.Log("Changing");
             if (r < 1.0f)
             {
-                r += _colorChangeStep;
+                r += _colorChangeStep * Time.deltaTime;
                 changingColor.r = r;
                 _ring.Color = new Color(r, g, b);
-                yield return waitTime;
+                yield return null;
                 continue;
             }
 
             if (g < 1.0f)
             {
-                g += _colorChangeStep;
+                g += _colorChangeStep * Time.deltaTime;
                 _ring.Color = new Color(r, g, b);
-                yield return waitTime;
+                yield return null;
                 continue;
             }
             if (b < 1.0f)
             {
-                b += _colorChangeStep;
+                b += _colorChangeStep * Time.deltaTime;
                 _ring.Color = new Color(r, g, b);
-                yield return waitTime;
+                yield return null;
                 continue;
             }
 

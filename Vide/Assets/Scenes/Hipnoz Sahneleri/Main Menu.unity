@@ -1048,6 +1048,10 @@ PrefabInstance:
       propertyPath: _trackingOriginType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: isInsightPassthroughEnabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4318,10 +4322,7 @@ PrefabInstance:
     - {fileID: 414079973660828628, guid: 53080e5252a6a1a4ea5c4bb29f6992a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8791521769556784503, guid: 53080e5252a6a1a4ea5c4bb29f6992a3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53080e5252a6a1a4ea5c4bb29f6992a3, type: 3}
 --- !u!4 &1611445390 stripped
 Transform:
@@ -5064,9 +5065,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 6070557662036507720, guid: d920f896d6903404fa9b1621d8018160, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 5043873438866242016, guid: d920f896d6903404fa9b1621d8018160, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 4392614748386259818, guid: d920f896d6903404fa9b1621d8018160, type: 3}
