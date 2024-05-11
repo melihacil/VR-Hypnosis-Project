@@ -30,7 +30,7 @@ public class HypnoseSequenceManager : MonoBehaviour
 {
     public static HypnoseSequenceManager instance;
     public short lastActiveIndex = -1;
-
+    public static   int num10 = 10;
     [SerializeField] private ScorePanel _mainMenuScorePanel;
 
     private SequenceDataValues[] _datas;
@@ -53,7 +53,6 @@ public class HypnoseSequenceManager : MonoBehaviour
         _datas[index] = value;
         lastActiveIndex = index;
         Debug.Log("Sequence Ended");
-
     }
 
     public SequenceDataValues GetSequenceData(byte index)

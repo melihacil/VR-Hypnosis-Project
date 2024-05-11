@@ -1,7 +1,9 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Rendering.Universal.Internal;
 
 
 public class SequenceData : MonoBehaviour
@@ -17,6 +19,8 @@ public class SequenceData : MonoBehaviour
 
     public static SequenceData instance;
 
+
+    
 
     [SerializeField] private PlayableDirector m_timeLine;
 
@@ -34,6 +38,8 @@ public class SequenceData : MonoBehaviour
             totalTime = (float)m_timeLine.duration;
             Debug.Log(totalTime);
         }
+
+
     }
 
     public void AddSequenceObject(float duration, float gazedDuration, bool isGazed)
@@ -47,6 +53,10 @@ public class SequenceData : MonoBehaviour
 
     public void SequenceEnd()
     {
+
+
+
+
         SetSeqData();
         HypnoseSequenceManager.instance.SetSequenceData(index,dataVal);
     }
