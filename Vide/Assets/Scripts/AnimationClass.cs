@@ -17,7 +17,7 @@ public class AnimationClass : MonoBehaviour
 
     void AnimationTest()
     {
-        this.runInEditMode = true;
+       // this.runInEditMode = true;
         _AnimationClipControl.clip = _AnimationClip;
         _AnimationClipControl.Play();
     }
