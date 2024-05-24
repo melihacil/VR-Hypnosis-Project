@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 
@@ -32,7 +33,9 @@ public class HypnoseSequenceManager : MonoBehaviour
     public short lastActiveIndex = -1;
     public static   int num10 = 10;
     [SerializeField] private ScorePanel _mainMenuScorePanel;
-
+    [SerializeField] private GameObject _startGameObject;
+    [SerializeField] private GameObject[] _startInactiveObjects;
+    [SerializeField] private PlayableDirector _startDirector;
     private SequenceDataValues[] _datas;
 
     public void Awake()
@@ -47,6 +50,16 @@ public class HypnoseSequenceManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+
+    public void StartStairSequence()
+    {
+       _startGameObject.SetActive(true);
+        foreach (var obj in _startInactiveObjects)
+        {
+            obj.SetActive(false);
+        }
+        _startDirector.Play();
+    }
 
     public void SetSequenceData(short index, SequenceDataValues value)
     {
