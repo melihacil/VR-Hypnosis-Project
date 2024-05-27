@@ -14,4 +14,9 @@ public class PlayerInteraction : MonoBehaviour
         //action?.Invoke();
         unityEvent?.Invoke();   
     }
+
+    public string GetResults()
+    {
+        return "WOWOWO";
+    }
 }
