@@ -123,6 +123,9 @@ public class ObjectAlignment : MonoBehaviour
         isImmediately = false;
 
         var targetPosition = GetTargetPosition();
+        if (targetPosition == Vector3.zero)
+            return false;
+
         var isInRange = Mathf.Abs((_snappedPosition - targetPosition).magnitude) < fixedDeltaLimit;
 
         if (!isInRange || !hasZeroLimitDirection)
@@ -140,6 +143,9 @@ public class ObjectAlignment : MonoBehaviour
     //---------------------------------------------------------------------------------
     private Vector3 GetTargetPosition()
     {
+        if (mainTarget == null)
+            return Vector3.zero;
+
         var position = mainTarget.position + offset;
         position.SetY(heightTarget.position.y + offset.y);
         var direction = mainTarget.forward;

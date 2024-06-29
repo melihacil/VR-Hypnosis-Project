@@ -19,7 +19,7 @@ public class SceneLoadManager : MonoBehaviour
         if (instance != null)
         {
             Debug.LogError("INSTANCE ALREADY FOUND!!!");
-            Destroy(this.gameObject);
+            Destroy(instance.gameObject);
         }
         instance = this;
     }

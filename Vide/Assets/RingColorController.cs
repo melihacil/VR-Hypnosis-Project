@@ -37,7 +37,6 @@ public class RingColorController : MonoBehaviour
         var complete = false;
         while (!complete)
         {
-            Debug.Log("Changing");
             if (r < 1.0f)
             {
                 r += _colorChangeStep * Time.deltaTime;

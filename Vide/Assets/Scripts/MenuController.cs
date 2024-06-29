@@ -14,8 +14,11 @@ public class MenuController : MonoBehaviour
     private Transform scenarioPanel;
 
     [SerializeField]
-    private GameObject themePanel;
-
+    private GameObject _themePanel;
+    [SerializeField]
+    private GameObject _settingsPanel;
+    [SerializeField]
+    private GameObject _scenariosPanel;
     [SerializeField]
     private PokeInteractable scenarioListButton;
 
@@ -35,6 +38,7 @@ public class MenuController : MonoBehaviour
     private ObjectAlignment _alignment;
     private bool _isMenuActive;
     //private OVRInteractorController _interactorController;
+    public TextMeshPro textOnOff;
 
     public ScorePanel panelInfo;
 
@@ -77,6 +81,14 @@ public class MenuController : MonoBehaviour
         //_interactorController.SetInteractor(OVRActionType.Poke, true);
     }
 
+    public void ChangeTextOpenStatus()
+    {
+        GameData.instance.isTextOn = !GameData.instance.isTextOn;
+        if (textOnOff != null)
+            textOnOff.text = GameData.instance.isTextOn ? "Kapa" : "Aç";
+    }
+
+
     [ContextMenu("TestMenu Button")]
     public void SwitchPanels()
     {
@@ -87,7 +99,17 @@ public class MenuController : MonoBehaviour
     public void SwitchThemePanels()
     {
         mainPanel.gameObject.SetActive(!mainPanel.gameObject.activeSelf);
-        themePanel.SetActive(!themePanel.gameObject.activeSelf);
+        _themePanel.SetActive(!_themePanel.gameObject.activeSelf);
+    }
+    public void SwitchSettingPanels()
+    {
+        mainPanel.gameObject.SetActive(!mainPanel.gameObject.activeSelf);
+        _settingsPanel.SetActive(!_settingsPanel.gameObject.activeSelf);
+    }
+    public void SwitchScenarioPanels()
+    {
+        mainPanel.gameObject.SetActive(!mainPanel.gameObject.activeSelf);
+        _scenariosPanel.SetActive(!_scenariosPanel.gameObject.activeSelf);
     }
     public void SwitchThemePanels(GameObject obj)
     {
@@ -114,6 +136,12 @@ public class MenuController : MonoBehaviour
 
         //_interactorController.LoadInteractorFromBackup();
     }
+
+    public void ClosePanel()
+    {
+        gameObject.SetActive(!gameObject.activeSelf);
+    }
+
 
 
     //---------------------------------------------------------------------------------
