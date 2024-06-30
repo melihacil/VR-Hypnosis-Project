@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Hipnoz Sahneleri/Main Menu.unity
     guid: af75fe16c83344d489559d4aac548976
   - enabled: 1
+    path: Assets/ForestAndUnderwater/Scenes/Forest.unity
+    guid: 5a80109d3eaaf174fb721507a9d13653
+  - enabled: 1
+    path: Assets/ForestAndUnderwater/Scenes/UnderWater.unity
+    guid: a6947e7c6f14f354dabfffed4b9ccb7b
+  - enabled: 1
     path: Assets/Scenes/Hipnoz Sahneleri/Space Scene.unity
     guid: 636c2546159ebb24d9d6c0c118be3d42
   m_configObjects:
