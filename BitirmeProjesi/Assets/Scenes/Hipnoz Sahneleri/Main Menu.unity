@@ -3574,6 +3574,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
 --- !u!4 &511712304
 Transform:
   m_ObjectHideFlags: 0
@@ -6428,7 +6430,7 @@ Transform:
   m_GameObject: {fileID: 942363443}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.70870703, z: -0, w: 0.7055029}
-  m_LocalPosition: {x: 1.3076364, y: -1.743, z: 6.141}
+  m_LocalPosition: {x: 1.308, y: -1.764, z: 6.073}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8430,7 +8432,7 @@ Transform:
   m_GameObject: {fileID: 1428287218}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.70870703, z: -0, w: 0.7055029}
-  m_LocalPosition: {x: 1.303, y: -1.743, z: 7.097}
+  m_LocalPosition: {x: 1.334, y: -1.764, z: 7.097}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9625,8 +9627,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTextOn: 0
   isFullRun: 0
-  isCounterOn: 0
-  _fpsCounter: {fileID: 844402030}
   textOnOff: {fileID: 1675840161}
 --- !u!4 &1612346034
 Transform:
@@ -11653,7 +11653,7 @@ Transform:
   m_GameObject: {fileID: 1945943221}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.32236344, y: -1.743, z: 6.145}
+  m_LocalPosition: {x: 0.317, y: -1.743, z: 6.134}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13005,7 +13005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2099612803
 Transform:
   m_ObjectHideFlags: 0
