@@ -38,6 +38,28 @@ public class SceneMenuController : MonoBehaviour
     }
 
 
+    public void LoadScene()
+    {
+        if (GameData.instance == null)
+        {
+            SceneManager.LoadScene(0);
+            return;
+
+        }
+
+        if (!GameData.instance.isFullRun)
+        {
+            SceneManager.LoadScene(0);
+            return;
+        }
+        var index = SceneManager.GetActiveScene().buildIndex;
+        index = index == 3 ? 0 : index;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        
+
+    }
+
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(0);

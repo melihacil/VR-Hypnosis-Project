@@ -2709,6 +2709,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 27bfdb9a40efac94b969eaf77cea92d9, type: 3}
   m_PrefabInstance: {fileID: 470904917}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &471176032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 471176035}
+  - component: {fileID: 471176034}
+  - component: {fileID: 471176033}
+  - component: {fileID: 471176036}
+  m_Layer: 0
+  m_Name: UnderwaterStoryObject1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &471176033
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471176032}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!320 &471176034
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471176032}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: e66f504d15ab7d94188473a303515386, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -7659550029556243234, guid: e66f504d15ab7d94188473a303515386, type: 2}
+    value: {fileID: 471176033}
+  - key: {fileID: 3014499058795392463, guid: e66f504d15ab7d94188473a303515386, type: 2}
+    value: {fileID: 2016731760}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &471176035
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471176032}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 56.855, y: 19.983, z: 84.623}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1217244692}
+  - {fileID: 1912429836}
+  - {fileID: 1123718921}
+  - {fileID: 1512674784}
+  - {fileID: 1735995920}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &471176036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471176032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66118ccd6d86c9540bbb27940d7009c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_textObj: {fileID: 427433588}
+  m_Text: {fileID: 567909727}
 --- !u!1 &480165630
 GameObject:
   m_ObjectHideFlags: 0
@@ -3221,7 +3316,7 @@ PrefabInstance:
     - target: {fileID: 3775913413517510565, guid: 53080e5252a6a1a4ea5c4bb29f6992a3, type: 3}
       propertyPath: _whenUnselect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1964542716}
+      objectReference: {fileID: 471176036}
     - target: {fileID: 3775913413517510565, guid: 53080e5252a6a1a4ea5c4bb29f6992a3, type: 3}
       propertyPath: _whenHover.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
@@ -3745,7 +3840,7 @@ PrefabInstance:
     - target: {fileID: 3775913413517510565, guid: 53080e5252a6a1a4ea5c4bb29f6992a3, type: 3}
       propertyPath: _whenUnselect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1964542716}
+      objectReference: {fileID: 471176036}
     - target: {fileID: 3775913413517510565, guid: 53080e5252a6a1a4ea5c4bb29f6992a3, type: 3}
       propertyPath: _whenHover.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
@@ -5842,7 +5937,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1964542717}
+    m_TransformParent: {fileID: 471176035}
     m_Modifications:
     - target: {fileID: 3005601684205340120, guid: ce9491a5df028fd4ca0a5130dbaa4fec, type: 3}
       propertyPath: m_Name
@@ -5858,15 +5953,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3005601684205340123, guid: ce9491a5df028fd4ca0a5130dbaa4fec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -48.219578
+      value: -0.6685791
       objectReference: {fileID: 0}
     - target: {fileID: 3005601684205340123, guid: ce9491a5df028fd4ca0a5130dbaa4fec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.153124
+      value: -3.8789997
       objectReference: {fileID: 0}
     - target: {fileID: 3005601684205340123, guid: ce9491a5df028fd4ca0a5130dbaa4fec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -79.097694
+      value: 0.040000916
       objectReference: {fileID: 0}
     - target: {fileID: 3005601684205340123, guid: ce9491a5df028fd4ca0a5130dbaa4fec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6244,16 +6339,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217244691}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -79.24269}
-  m_LocalScale: {x: 0.10000001, y: 0.1, z: 0.10000001}
+  m_LocalPosition: {x: 0, y: 0, z: -0.10499573}
+  m_LocalScale: {x: 0.10000002, y: 0.1, z: 0.10000002}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 427433591}
-  m_Father: {fileID: 1964542717}
+  m_Father: {fileID: 471176035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -48.18992, y: -2.7131238}
+  m_AnchoredPosition: {x: -0.63891983, y: 1.5610003}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1217244693
@@ -7361,7 +7456,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1964542717}
+    m_TransformParent: {fileID: 471176035}
     m_Modifications:
     - target: {fileID: 100004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_Name
@@ -7377,15 +7472,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -48.219578
+      value: -0.6685791
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.693125
+      value: -0.41900063
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -79.097694
+      value: 0.040000916
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7586,15 +7681,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 087722501b66af446ace1a9e53e5c05f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rollAngle: -358.12894
-  rollQuaternion: {x: 0, y: 0, z: -0.016327523, w: -0.9998667}
+  rollAngle: -226.37091
+  rollQuaternion: {x: 0, y: 0, z: -0.9192353, w: -0.39370856}
   rollMatrix:
-    e00: 0.99946684
-    e01: -0.032650694
+    e00: -0.68998706
+    e01: -0.7238216
     e02: -0
     e03: 0
-    e10: 0.032650694
-    e11: 0.99946684
+    e10: 0.7238216
+    e11: -0.68998706
     e12: 0
     e13: 0
     e20: 0
@@ -8932,11 +9027,11 @@ Transform:
   m_GameObject: {fileID: 1735995919}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -48.219578, y: -8.153124, z: -79.097694}
+  m_LocalPosition: {x: -0.6685791, y: -3.8789997, z: 0.040000916}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1964542717}
+  m_Father: {fileID: 471176035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1735995921
 AudioSource:
@@ -9401,7 +9496,7 @@ Transform:
   m_GameObject: {fileID: 1912429835}
   serializedVersion: 2
   m_LocalRotation: {x: 0.06248901, y: 0.7043402, z: 0.06248901, w: -0.7043402}
-  m_LocalPosition: {x: -47.66958, y: -3.9631233, z: -79.2177}
+  m_LocalPosition: {x: -0.118579865, y: 0.31100082, z: -0.08000183}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9409,7 +9504,7 @@ Transform:
   - {fileID: 232594516}
   - {fileID: 1162290021}
   - {fileID: 1393802458}
-  m_Father: {fileID: 1964542717}
+  m_Father: {fileID: 471176035}
   m_LocalEulerAnglesHint: {x: -10.14, y: 180, z: 0}
 --- !u!114 &1912429837
 MonoBehaviour:
@@ -9899,15 +9994,10 @@ Transform:
   m_GameObject: {fileID: 1964542715}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 105.46058, y: 24.257124, z: 163.7607}
+  m_LocalPosition: {x: 104.406, y: 24.257124, z: 163.7607}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1217244692}
-  - {fileID: 1912429836}
-  - {fileID: 1123718921}
-  - {fileID: 1512674784}
-  - {fileID: 1735995920}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1964542718
@@ -10207,11 +10297,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TextMeshPro: {fileID: 427433589}
   m_sceneAudioTexts:
-  - Test Text 1 Test Text 1 Test Text 1 Test Text 1 Test Text 1
-  - Test Text 2 Test Text 2 Test Text 2 Test Text 2 Test Text 2
+  - "\u015Eimdi kendini su alt\u0131nda a\u015Fa\u011F\u0131ya inen bir merdivende
+    bulacaks\u0131n"
+  - "Yava\u015F\xE7a a\u015Fa\u011F\u0131ya ineceksin ve etraf\u0131n\u0131 inceleyeceksin"
+  - "A\u015Fa\u011F\u0131da bir gemi g\xF6receksin "
+  - "Bu gemiye odaklanmaya devam ederken a\u015Fa\u011F\u0131 ineceksin"
+  - "A\u015Fa\u011F\u0131daki kara bo\u015Flu\u011Fu g\xF6receksin ve yava\u015F\xE7a
+    ona do\u011Fru ilerleyeceksin"
+  - "Odaklanmaya devam ederken bo\u015Flu\u011Fa do\u011Fru ilerleyeceksin"
   m_sceneAudioDirections:
-  - {fileID: 8300000, guid: 116340e1a9b63e54990fe83d0444240d, type: 3}
-  - {fileID: 8300000, guid: 116340e1a9b63e54990fe83d0444240d, type: 3}
+  - {fileID: 8300000, guid: 04bf93bfffd078d4eb1fd043a2ef3780, type: 3}
+  - {fileID: 8300000, guid: 7d1a602321eadf841b776c98568eb04d, type: 3}
+  - {fileID: 8300000, guid: bbb15228e99b0b341a94026718fd5919, type: 3}
+  - {fileID: 8300000, guid: bf28861183619d74faf92c19a8c4ec07, type: 3}
+  - {fileID: 8300000, guid: 867e61a1b4baec342b50f17de47f16bc, type: 3}
+  - {fileID: 8300000, guid: 74f2d7185d3199b4f8c4f97d01eeb3b5, type: 3}
 --- !u!1001 &2021593206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11210,3 +11310,4 @@ SceneRoots:
   - {fileID: 223820928}
   - {fileID: 1942351678}
   - {fileID: 1964542717}
+  - {fileID: 471176035}
