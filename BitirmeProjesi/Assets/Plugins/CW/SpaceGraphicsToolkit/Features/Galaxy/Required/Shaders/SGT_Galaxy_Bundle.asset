@@ -15,7 +15,7 @@ MonoBehaviour:
   title: Space Graphics Toolkit/Galaxy
   target: {fileID: 4800000, guid: bad8e8212c14bde4bb367681e26353ae, type: 3}
   variantHash: -281844159
-  projectHash: -837447068
+  projectHash: 1991055360
   variants:
   - Pipe: 0
     Code: "//<HASH>1894443703</HASH>\n////////////////////////////////////////\n//

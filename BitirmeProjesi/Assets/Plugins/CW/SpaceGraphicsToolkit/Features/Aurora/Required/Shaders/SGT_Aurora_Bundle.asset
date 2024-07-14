@@ -15,7 +15,7 @@ MonoBehaviour:
   title: Space Graphics Toolkit/Aurora
   target: {fileID: 4800000, guid: 62a3385fd4e9a6742b89e6e25f9989b5, type: 3}
   variantHash: -1641841654
-  projectHash: -837447068
+  projectHash: 1991055360
   variants:
   - Pipe: 0
     Code: "//<HASH>95118518</HASH>\n////////////////////////////////////////\n//
